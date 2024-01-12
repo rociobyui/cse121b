@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Apply JavaScript example</title>
+    
+    <!--External to link HTML and Javascript. In this external link, we use a more modern JavaScript feature to solve the problem, the defer attribute, which tells the browser to continue downloading the HTML content once the <script> tag element has been reached. The defer solution only works for external scripts.-->
+    <script src="script.js" defer></script>
+  </head>
+  
+  <body>
+    <button>Click me</button>
+    <button>Good Morning!</button>
+    <button>Dale click aqui</button>
+    <button>Ire a Mexico pronto!</button>
+    <button>Yay!</button>
+  </body>
+</html>
+
+<!--For inline Javascript. This is an event listener, which listens for the browser's DOMContentLoaded event, which signifies that the HTML body is completely loaded and parsed. The JavaScript inside this block will not run until after that event is fired, therefore the error is avoided
+  document.addEventListener("DOMContentLoaded", () => {
+  // …
+});
+-->
