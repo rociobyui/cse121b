@@ -1,0 +1,32 @@
+<!-- dom-basics.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 2</title>
+
+    <!--Attaching the JavaScript file to this HTML file. 
+        But the java script file will be read and the consequence will be an error-->
+    <!--  <script src="dom-basics.js"></script> -->
+
+    <!--Attaching the JavaScript file to this HTML file and defering it to allow the HTML be read before the script file-->
+    defer <script src="dom-basics.js" defer></script>
+
+  </head>
+  <body>
+    <h1>Week 2</h1>
+    <section>
+      <h2>Section 1</h2>
+      <p>This is a paragraph</p>
+      <p id="p2">This is a paragraph with an ID</p>
+    </section>
+    <section>
+      <h2>Section 2</h2>
+      <div>
+        <p>This is a paragraph in section 2</p>
+        <p class="green">This is a paragraph with an class</p>
+      </div>
+    </section>
+  </body>
+</html>
