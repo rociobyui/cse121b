@@ -4,7 +4,7 @@
 
 /* Step 2 - Declare and instatiate (instatiate in java means to call a constructor of class which initializes the new object) Variables that hold my name, current year, and profilePicture. I can use "let", but because it will not change "const" because it will never change.  */
 const fullName = "Maria del Rocio Cedillo Sanchez";
-const currentYear = "year";
+const currentYear = "2024";
 const profilePicture = "images/myimage.png";
 
 /* Step 3 - Declare Element Variables. Setting the HTML Element Variables by Using methods to get the HTML elemts"id".  
