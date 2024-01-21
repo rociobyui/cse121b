@@ -9,8 +9,8 @@ const profilePicture = "images/myimage.png";
 
 /* Step 3 - Declare Element Variables. Setting the HTML Element Variables by Using methods to get the HTML elemts"id".  
 the */
-const nameElement = document.getElementById("#name");
-const foodElement = document.getElementById("#food");
+const nameElement = document.querySelector("#name");
+const foodElement = document.querySelector("#food");
 const yearElement = document.querySelector("#year");
 const imageElement = document.querySelector("img");
 
@@ -23,7 +23,7 @@ imageElement.setAttribute("src", profilePicture);
 imageElement.setAttribute("alt", `This is ${fullName}.`);
 
 /* Step 5 - Declare an Array variable to hold your favorite foods.*/
-let favFoods = ["Soups", "Salsa Verde", "Adobo", "Cranberry Juice"];
+let favFoods = ["Corn Soup", "Cranberry Juice", "Strawberry", "Orange"];
 foodElement.innerHTML = favFoods;
 let newFood = "Milk"; // Declare and instantiate a variable to hold another single favorite food item.
 favFoods.push(newFood); // Add the value stored in this new variable to your favorite food array.
