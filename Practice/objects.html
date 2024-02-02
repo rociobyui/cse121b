@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+    
+    
+<!--
+    <script>
+        const person = {
+            name: ["Bob", "Smith"], // an array as value. This is a data items. Object's property
+            age: 32,                // a number as value. This is a data items. Object's property
+            //bio: function() {       // a function as value. Object's methods. Under is a simpler way to write it.
+            bio() { //When the object's members are functions there is a simpler syntax. Instead of bio: function() we can write bio() like in this line. It is referred to as an object literal.
+                console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
+            },
+            introduceSelf: function() { // a function as value. Object's methods
+                console.log(`Hi! I am ${this.name[0]}.`);
+            },
+        };
+    </script>
+-->
+    
+<!--Example Objects as object properties
+    <script>
+       const person = {
+        name: {
+            first: "Bob",
+            last: "Smith",
+        },
+        
+        bio() { //When the object's members are functions there is a simpler syntax. Instead of bio: function() we can write bio() like in this line. It is referred to as an object literal.
+                console.log(`${this.name.first} ${this.name.last} is ${this.age} years old.`);
+            },
+            introduceSelf: function() { // a function as value. Object's methods
+                console.log(`Hi! I am ${this.name.first}.`);
+            },
+       };
+
+    </script> -->
+    <script>
+        const person = {
+            name: ["Bob", "Smith"],
+            age: 32,
+};
+const myDataName = "height";
+const myDataValue = "1.75m";
+person[myDataName] = myDataValue;
+
+function logProperty(propertyName) {
+  console.log(person[propertyName]);
+}
+
+logProperty("name");
+// ["Bob", "Smith"]
+logProperty("age");
+// 32
+
+    </script>
+  </body>
+
+</html>
