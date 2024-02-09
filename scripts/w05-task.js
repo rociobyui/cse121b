@@ -41,7 +41,9 @@ const getTemples = async () => { // Async anonymous function. // Create another 
 
 /* 6. reset Function */
 // Clear the displayed list of temples. Declare a function expression named reset that clears all of the <article> elements from the templesElement.
-const reset = () => templesElement.replaceChildren();
+const reset = () =>  {
+    templesElement.innerHTML = "";
+};
     // Assuming that articleElement is the element that contains the <article> elements
 
 /* 7. filterTemples Function */
