@@ -1,0 +1,49 @@
+
+
+body {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+#game-title h1 {
+    text-align: center;
+    margin-top: 80px;
+    color: rgb(213, 144, 71);
+    /*width: 100%;*/ 
+}
+
+.game-container {
+    display:grid;
+    width: fit-content;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 30px;   
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(127, 213, 127);
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+div img {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+
+}
