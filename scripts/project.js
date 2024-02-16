@@ -27,38 +27,34 @@ document.addEventListener("DOMContentLoaded", () => {
             const cardElement = document.createElement("div");
             cardElement.classList.add("card");
             cardElement.dataset.index = index;
-            cardElement.textContent = card.value;
+            cardElement.textContent = card.cardName;
 
-            // img
+            // Create image element
             const imgElement = document.createElement("img");
             imgElement.src = card.imgUrl;
             imgElement.alt = card.id;
 
             //
             cardElement.appendChild(imgElement);
-
-
+            
             cardElement.addEventListener("click", () => handleCardClick(cardElement));
             gameContainer.appendChild(cardElement);
-
-            
         });
 
         function handleCardClick(cardElement) {
-            //Prevent clicking on matched or already selected cards.
+            //Preventing to click on matched or already selected cards.
             if (cardElement.classList.contains("matched") || cardElement.classList.contains("selected")) {
                 return;    
             }
 
-            cardElement.classList.add("selected");
+            cardElement.classList.toggle("selected");
             selectedCards.push({ index: cardElement.dataset. index, value: cardElement.textContent });
-
+            console.log(selectedCards);
             if (selectedCards.length === 2) {
                 setTimeout(checkMatch, 500);
             }
         }
 
-    
         function checkMatch() {
             const [card1, card2] = selectedCards;
 
@@ -67,25 +63,27 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 hideCards(card1.index, card2.index);
             }
-
+            // Populate array
             selectedCards = [];
+            
+            
         }
         
+        // Checking for all the game card matches.
         function cardMatch(index1, index2) {
             const cardElements = document.querySelectorAll(".selected");
             cardElements.forEach(card => card. classList.add("matched"));
             matchedCards.push(index1, index2);
-
-            
-            
+           
             if (matchedCards.length === cards.length) {
-                alert("congratulations! You matched all the cards.");
+                alert("You did it!");
         
             }        
         }
 
+        // Hiding not matching cards (set timeout).
         function hideCards(index1, index2) {
-            const cardElements = document. querySelectorAll(".selected)");
+            const cardElements = document.querySelectorAll(".selected");
             cardElements.forEach(card => card.classList.remove("selected"));
 
             setTimeout(() => {
