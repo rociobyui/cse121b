@@ -1,4 +1,3 @@
-// Global variables
 // To load the DOM
 document.addEventListener("DOMContentLoaded", () => {
     // Variable to hold json link
@@ -10,12 +9,11 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(data => startGame(data))
         .catch(error => console.error("Error fetching data:", error));
        
-    
-    //
+    // Use fetched data from json link to start the matching game with the cards.
     function startGame(data) {
         const cards = data.cards;
 
-        // Shuffle the cards
+        // Shuffle the cards with random() function
         cards.sort(() => Math.random() - 0.5);
 
         const gameContainer = document.getElementById("game-container");
@@ -34,9 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
             imgElement.src = card.imgUrl;
             imgElement.alt = card.id;
 
-            //
+            // Append img
             cardElement.appendChild(imgElement);
             
+            // Add event listener
             cardElement.addEventListener("click", () => handleCardClick(cardElement));
             gameContainer.appendChild(cardElement);
         });
@@ -64,9 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 hideCards(card1.index, card2.index);
             }
             // Populate array
-            selectedCards = [];
-            
-            
+            selectedCards = [];   
         }
         
         // Checking for all the game card matches.
